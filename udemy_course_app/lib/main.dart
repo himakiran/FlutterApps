@@ -28,17 +28,17 @@ class MyApp extends StatelessWidget {
                   padding: EdgeInsets.all(10.0),
                   children: <Widget>[
                     Image.asset('assets/food.jpg'),
-                    Text('Food Paradise'),
+                    Center(child:Text('Food Paradise')),
                     Image.asset('assets/food.jpg'),
-                    Text('Food Paradise 2'),
+                    Center(child:Text('Food Paradise')),
                     Image.asset('assets/food.jpg'),
-                    Text('Food Paradise 3'),
+                    Center(child:Text('Food Paradise')),
                     Image.asset('assets/food.jpg'),
-                    Text('Food Paradise'),
+                    Center(child:Text('Food Paradise')),
                     Image.asset('assets/food.jpg'),
-                    Text('Food Paradise 2'),
+                    Center(child:Text('Food Paradise')),
                     Image.asset('assets/food.jpg'),
-                    Text('Food Paradise 3')
+                    Center(child:Text('Food Paradise'))
                   ],
                 ),
               ),
