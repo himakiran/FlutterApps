@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 
 main() {
-  runApp(myApp());
+  runApp(MyApp());
 }
 
-class myApp extends StatelessWidget {
-  build(context) {
+class MyApp extends StatelessWidget {
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
