@@ -17,10 +17,8 @@ class MyApp extends StatelessWidget {
             shrinkWrap: true,
             padding: EdgeInsets.all(15.0),
             children: <Widget>[
-              RaisedButton(
+              FloatingActionButton(
                 onPressed: () {},
-                color: Colors.red,
-                textColor: Colors.black,
                 child: Text('ADD'),
               ),
               Image.asset('assets/food.jpg'),
