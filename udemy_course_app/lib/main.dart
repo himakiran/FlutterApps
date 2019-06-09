@@ -47,10 +47,10 @@ class _MyAppState extends State<MyApp> {
           alignment: Alignment.center,
           child: RaisedButton(
             onPressed: () {
-              setState(() {      // Any code which changes the internal state has to be put here in this function for it to work.
+              setState(() {
+                // Any code which changes the internal state has to be put here in this function for it to work.
                 _products.add('Advanced Food Tester');
               });
-              
             },
             child: Text('ADD'),
           ),
@@ -59,9 +59,7 @@ class _MyAppState extends State<MyApp> {
           // Read the explanation of the below line at the start of this class
           children: _products
               .map((element) => Card(
-                    child: ListView(
-                      shrinkWrap: true,
-                      padding: EdgeInsets.all(10.0),
+                    child: Column(
                       children: <Widget>[
                         Image.asset('assets/food.jpg'),
                         Center(child: Text(element)),
