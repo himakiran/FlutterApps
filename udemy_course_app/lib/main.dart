@@ -14,19 +14,25 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: Text("EasyList"), backgroundColor: Colors.red),
         body: Card(
           child: ListView(
-              shrinkWrap: true,
-              padding: EdgeInsets.all(15.0),
-              children: <Widget>[
+            shrinkWrap: true,
+            padding: EdgeInsets.all(15.0),
+            children: <Widget>[
+              RaisedButton(
+                onPressed: () {},
+                color: Colors.red,
+                textColor: Colors.black,
+                child: Text('ADD'),
+              ),
               Image.asset('assets/food.jpg'),
               Text('Food Paradise'),
               Image.asset('assets/food.jpg'),
               Text('Food Paradise 2'),
               Image.asset('assets/food.jpg'),
               Text('Food Paradise 3')
-            ], 
+            ],
           ),
+        ),
       ),
-    ),
     );
   }
 }
