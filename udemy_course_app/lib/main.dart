@@ -16,7 +16,11 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Image.asset('assets/food.jpg'),
-              Text('Food Paradise')
+              Text('Food Paradise'),
+              Image.asset('assets/food.jpg'),
+              Text('Food Paradise 2'),
+              Image.asset('assets/food.jpg'),
+              Text('Food Paradise 3')
             ],
           ),
         ),
