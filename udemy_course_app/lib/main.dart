@@ -11,26 +11,39 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("EasyList"), backgroundColor: Colors.red),
-        body: Card(
-          child: ListView(
-            shrinkWrap: true,
-            padding: EdgeInsets.all(15.0),
+          appBar: AppBar(title: Text("EasyList"), backgroundColor: Colors.red),
+          body: ListView(
             children: <Widget>[
-              FloatingActionButton(
-                onPressed: () {},
-                child: Text('ADD'),
+              Container(
+                margin: EdgeInsets.all(10.0),
+                alignment: Alignment.center,
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Text('ADD'),
+                ),
               ),
-              Image.asset('assets/food.jpg'),
-              Text('Food Paradise'),
-              Image.asset('assets/food.jpg'),
-              Text('Food Paradise 2'),
-              Image.asset('assets/food.jpg'),
-              Text('Food Paradise 3')
+              Card(
+                child: ListView(
+                  shrinkWrap: true,
+                  padding: EdgeInsets.all(10.0),
+                  children: <Widget>[
+                    Image.asset('assets/food.jpg'),
+                    Text('Food Paradise'),
+                    Image.asset('assets/food.jpg'),
+                    Text('Food Paradise 2'),
+                    Image.asset('assets/food.jpg'),
+                    Text('Food Paradise 3'),
+                    Image.asset('assets/food.jpg'),
+                    Text('Food Paradise'),
+                    Image.asset('assets/food.jpg'),
+                    Text('Food Paradise 2'),
+                    Image.asset('assets/food.jpg'),
+                    Text('Food Paradise 3')
+                  ],
+                ),
+              ),
             ],
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
