@@ -12,12 +12,17 @@ void main() => runApp(
 // dynamic apps require StatefulWidget
 
 class MyApp extends StatelessWidget {
+  final String startingProduct = "Advanced Food Tester";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData(
+          primarySwatch: Colors.red,
+          brightness: Brightness.light
+        ),
         home: Scaffold(
-      appBar: AppBar(title: Text("EasyList"), backgroundColor: Colors.red),
-      body: ListView(children: <Widget>[ProductManager()]),
+      appBar: AppBar(title: Text("EasyList")),
+      body: ListView(children: <Widget>[ProductManager(startingProduct)]),
     ));
   }
 }

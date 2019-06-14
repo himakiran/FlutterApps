@@ -18,8 +18,11 @@ class _ProductManagerState extends State<ProductManager> {
 
   @override
   void initState() {
-    _products.add(widget.startingProduct);
     super.initState();
+    // the widget property of the State object allows you to access the properties
+    // and methods of the base class ie _ProductManagerState.
+    _products.add(widget.startingProduct);
+    
   }
 
   @override
@@ -28,6 +31,7 @@ class _ProductManagerState extends State<ProductManager> {
       margin: EdgeInsets.all(10.0),
       alignment: Alignment.center,
       child: RaisedButton(
+        color: Theme.of(context).primaryColor,
         onPressed: () {
           setState(() {
             // Any code which changes the internal state has to be put here in this function for it to work.
