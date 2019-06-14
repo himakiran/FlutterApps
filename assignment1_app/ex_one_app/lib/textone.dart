@@ -11,7 +11,7 @@ class TextOne extends StatelessWidget {
                 margin: EdgeInsets.all(10.0),
                 color: Theme.of(context).primaryColorLight,
                 child: SizedBox(
-                    width: 80.0,
+                    width: 240.0,
                     height: 80.0,
                     child: FittedBox(fit: BoxFit.fill, child: Text(word))));
   }
