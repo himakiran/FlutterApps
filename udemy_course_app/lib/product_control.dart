@@ -20,7 +20,7 @@ class ProductControl extends StatelessWidget {
         onPressed: () {
           // Now the below function will actually run the _addProduct function
           // in the product_manager.dart file
-          addProduct();
+          addProduct('Advanced Food Tester');
         },
         child: Text('ADD'),
       );
