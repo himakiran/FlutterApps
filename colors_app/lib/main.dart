@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import './color_app.dart';
+import './color_state.dart';
 
 void main(){
-  runApp(ColorApp());
+  runApp(ColorState());
 }
+
