@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 class ColorApp extends StatelessWidget{
   @override
@@ -7,10 +7,17 @@ class ColorApp extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          color: Colors.red
+          color: Colors.red),
+          floatingActionButton: FloatingActionButton(onPressed: () {},
+          tooltip: 'Change Color',
+          child: Icon(Icons.colorize),
+            
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.endFloat
+      
         ),
-      )
-    );
+      );
+    
   }
   
 }
