@@ -9,11 +9,52 @@ class ColorState extends StatefulWidget {
 }
 
 class _ColorState extends State<ColorState> {
-  //List<Color> colorsDisplayed = [Colors.red, Colors.blue, Colors.green];
-  List<MaterialColor> colorsDisplayed = const <MaterialColor>[Colors.red, Colors.pink, Colors.purple, Colors.deepPurple, Colors.indigo, Colors.blue, Colors.lightBlue, Colors.cyan, Colors.teal, Colors.green, Colors.lightGreen, Colors.lime, Colors.yellow, Colors.amber, Colors.orange, Colors.deepOrange, Colors.brown, Colors.blueGrey];
+  // The below code declares a list of primary material colors
+  static List<MaterialColor> colorsDisplayed = const 
+  <MaterialColor>[Colors.red, Colors.pink, Colors.purple, Colors.deepPurple, Colors.indigo, Colors.blue, Colors.lightBlue, 
+  Colors.cyan, Colors.teal, Colors.green, Colors.lightGreen, Colors.lime, Colors.yellow, Colors.amber, Colors.orange, 
+  Colors.deepOrange, Colors.brown, Colors.blueGrey];
+  static List<MaterialAccentColor> accentColorsDisplayed = const 
+  <MaterialAccentColor>[Colors.redAccent, Colors.pinkAccent, Colors.purpleAccent, Colors.deepPurpleAccent, Colors.indigoAccent, Colors.blueAccent, 
+  Colors.lightBlueAccent,  Colors.cyanAccent, Colors.tealAccent, Colors.greenAccent, Colors.lightGreenAccent, Colors.limeAccent, Colors.yellowAccent, 
+  Colors.amberAccent, Colors.orangeAccent, Colors.deepOrangeAccent];
+
+  // This variable holds the color which shall be painted
   Color showColor;
+
+  // To create a list of all material colors, we define a function listAllColors
+  // This function takes in the list of primary material colors and returns the colorswatch of that color
+  // and the colorswatch of the accent color.
+
+  static List<Color> listAllColors(List<MaterialColor> ll, List<MaterialAccentColor> al){
+  List<Color> allColors =new List<Color>();
+    // This function adds all the swatch colors
+    void addMaterialColors(MaterialColor c){
+      allColors.add(c[50]); // This adds for eg Colors.red[50] to the list
+    for(var j=100; j<1000; j+=100){
+      if(j!=500)
+      {
+        allColors.add(c[j]); 
+      } // since the color is same as the colorswatch with index 500
+      else
+      {
+        allColors.add(c);
+      }
+    }
+    
+    }
+    ll.forEach((el) => addMaterialColors(el));
+    void addMaterialAccentColors(MaterialAccentColor ac){
+      allColors.add(ac[100]);allColors.add(ac);allColors.add(ac[400]);allColors.add(ac[700]);
+    }
+    al.forEach((el) => addMaterialAccentColors(el));
+    return allColors;
+  }
+
+
+  static List<Color> allColors = listAllColors(colorsDisplayed,accentColorsDisplayed);
   int i = 0;
-  int maxSize = 18;
+  int maxSize = allColors.length;
   @override
   void initState() {
     super.initState();
@@ -26,9 +67,10 @@ class _ColorState extends State<ColorState> {
       var rng = new Random();
       i = rng.nextInt(maxSize);
     
-      showColor = colorsDisplayed[i];
+      showColor = allColors[i];
     });
   }
+  
 
   @override
   Widget build(BuildContext context) {
