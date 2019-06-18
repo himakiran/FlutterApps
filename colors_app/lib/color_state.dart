@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -95,34 +96,77 @@ class _ColorState extends State<ColorState> {
     showColor = Colors.red;
   }
 
-  changeColor() {
+  void changeColor() {
     setState(() {
-      print("set state running");
+      //print("set state running");
       var rng = new Random();
       i = rng.nextInt(maxSize);
 
       showColor = allColors[i];
     });
   }
+  void showColorInfo(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("Color Information"),
+          content: new Text(showColor.value.toString()),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Close"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    print("build running");
+    //print("build running");
     return MaterialApp(
-      home: Scaffold(
-          body: Container(color: showColor),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              changeColor();
-              Scaffold.of(context).showSnackBar(new SnackBar(
-                content: new Text('Hello'),
-                duration: new Duration(seconds: 5),
-              ));
-            },
-            tooltip: 'Change Color',
-            child: Icon(Icons.colorize),
-          ),
-          floatingActionButtonLocation: FloatingActionButtonLocation.endFloat),
-    );
+        home: Scaffold(
+            body: Builder(builder: (context) => Container(
+                color: showColor,
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: FloatingActionButton(
+                        onPressed: () {
+                          showColorInfo(context);
+                        },
+                        tooltip: 'Show Color Info',
+                        child: Icon(Icons.info),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: FloatingActionButton(
+                        onPressed: () {
+                          changeColor();
+                        },
+                        tooltip: 'Change Color',
+                        child: Icon(Icons.colorize),
+                      ),
+                    ),
+                  ],
+                )))
+            // floatingActionButton: FloatingActionButton(
+            //   onPressed: () {
+            //     changeColor();
+            //   },
+            //   tooltip: 'Change Color',
+            //   child: Icon(Icons.colorize),
+            // ),
+            // floatingActionButtonLocation: FloatingActionButtonLocation.endFloat
+
+            ));
   }
 }
