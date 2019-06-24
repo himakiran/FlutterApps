@@ -10,3 +10,11 @@ android : https://flutter.dev/docs/deployment/android#android-release-faq
             https://developer.android.com/studio/publish/upload-bundle
             https://support.google.com/googleplay/android-developer/answer/7159011
             https://support.google.com/googleplay/android-developer/answer/113469?hl=en-GB&ref_topic=7072031
+
+playstore screenshots : 379x674
+feature graphic : https://www.norio.be/android-feature-graphic-generator/
+playstore 64 bit warning : https://stackoverflow.com/questions/55982981/how-to-build-app-compliant-with-google-play-64-bit-requirement
+                            https://medium.com/@truongsinh/flutter-android-64-bit-so-what-the-fuss-15da6f8e3a46
+
+Privacy policy : https://app-privacy-policy-generator.firebaseapp.com/#
+                 https://app.flycricket.com/import/privacy
