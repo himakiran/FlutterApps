@@ -204,6 +204,8 @@ class _ColorState extends State<ColorState> {
   Widget build(BuildContext context) {
     //print("build running");
     return MaterialApp(
+        title: 'Material Colors',
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
             body: Builder(
                 builder: (context) => Container(

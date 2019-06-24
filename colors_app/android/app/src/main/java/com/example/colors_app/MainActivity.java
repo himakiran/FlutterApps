@@ -1,4 +1,4 @@
-package com.example.colors_app;
+package in.chundi.colors_app;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

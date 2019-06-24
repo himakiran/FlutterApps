@@ -1,0 +1,12 @@
+
+
+Creat flutter app with custom domain
+
+flutter create --org com.yourdomain appname
+
+deploy apps
+
+android : https://flutter.dev/docs/deployment/android#android-release-faq
+            https://developer.android.com/studio/publish/upload-bundle
+            https://support.google.com/googleplay/android-developer/answer/7159011
+            https://support.google.com/googleplay/android-developer/answer/113469?hl=en-GB&ref_topic=7072031
