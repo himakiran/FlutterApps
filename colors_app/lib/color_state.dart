@@ -77,7 +77,7 @@ class _ColorState extends State<ColorState> {
     Colors.deepOrangeAccent
   ];
 
-  // material accent colors names 
+  // material accent colors names
   static List<String> accentColorNames = const <String>[
     "RedAccent",
     "PinkAccent",
@@ -132,7 +132,7 @@ class _ColorState extends State<ColorState> {
     for (var pair in zip([ll, cl])) {
       addMaterialColors(pair[0], pair[1]);
     }
-    
+
     // NOT USED ANYMORE : ll.forEach((el) => addMaterialColors(el));
 
     void addMaterialAccentColors(MaterialAccentColor ac, String s) {
@@ -159,7 +159,7 @@ class _ColorState extends State<ColorState> {
     // Firstly we initialize the lists
     listAllColors(
         colorsDisplayed, accentColorsDisplayed, colorNames, accentColorNames);
-    // Set the start color and name 
+    // Set the start color and name
     showColor = Colors.red;
     showColorName = "Colors.red";
   }
@@ -231,9 +231,6 @@ class _ColorState extends State<ColorState> {
                           ),
                         ),
                       ],
-                    )))
-            
-
-            ));
+                    )))));
   }
 }
