@@ -18,3 +18,21 @@ playstore 64 bit warning : https://stackoverflow.com/questions/55982981/how-to-b
 
 Privacy policy : https://app-privacy-policy-generator.firebaseapp.com/#
                  https://app.flycricket.com/import/privacy
+
+IOS
+
+https://flutter.dev/docs/deployment/ios
+https://developer.apple.com/account/ios/identifier/bundle
+
+Generate icons using the below url.
+
+https://appiconmaker.co 
+
+and then open xcode go to Assets.xcassets and drag each icon to the proper place.
+
+http://thomasfinch.me/iosicon/ for rounded corner apps.
+https://app.shotbot.io/ for screenshots
+
+Do not use cmd+4 shortcut, use Simulator -> New Screenshot.
+
+
