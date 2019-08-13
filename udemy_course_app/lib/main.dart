@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+// below import is for UI debugging
+import 'package:flutter/rendering.dart';
 
 import './product_manager.dart';
 
-// main() {
-//   runApp(MyApp());
-// }
+main() {
+  //below statement for UI debug
+  debugPaintSizeEnabled = true;
+  runApp(MyApp());
+}
 
-void main() => runApp(
-    MyApp()); // This syntax is valid if main() contains only one statement
+// void main() => runApp(
+//     MyApp()); 
+
+// The above syntax is valid if main() contains only one statement
 
 // dynamic apps require StatefulWidget
 
