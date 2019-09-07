@@ -1,2 +1,4 @@
 
 colors_app/android/key.properties
+*.pbxproj
+*.code-workspace
